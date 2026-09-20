@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jory — AI-Assisted Systems Engineering Workflow</title>
+<meta name="description" content="Evidence-grounded AI-assisted software engineering, persistent semantic memory, executable verification, Rust systems, and trading infrastructure.">
+<meta name="author" content="Jory (starcorn2020)">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jory — AI-Assisted Systems Engineering">
+<meta property="og:title" content="Jory — AI-Assisted Systems Engineering Workflow">
+<meta property="og:description" content="Evidence-grounded AI-assisted software engineering, persistent semantic memory, executable verification, Rust systems, and trading infrastructure.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jory — AI-Assisted Systems Engineering Workflow">
+<meta name="twitter:description" content="Evidence-grounded AI-assisted software engineering, persistent semantic memory, executable verification, Rust systems, and trading infrastructure.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230c0e11'/><text x='16' y='22' font-family='monospace' font-size='16' fill='%23d9a441' text-anchor='middle'>J</text></svg>">
+
+<script>
+  /* Avoid a flash of untranslated content when a non-default language is stored. */
+  (function () {
+    try {
+      var stored = localStorage.getItem('lang');
+      if (stored && stored !== 'en') {
+        document.documentElement.classList.add('i18n-pending');
+        setTimeout(function () {
+          document.documentElement.classList.remove('i18n-pending');
+        }, 900);
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-text">
+        <strong>Jory</strong>
+        <span class="brand-sub" data-i18n="nav.brandsub">AI-assisted systems engineering</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" data-i18n-label="a11y.menu" aria-label="Open menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </button>
+
+    <nav class="nav" id="navMenu" data-i18n-label="a11y.nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="#how" data-i18n="nav.how">Approach</a></li>
+        <li><a href="#workflow" data-i18n="nav.workflow">Workflow</a></li>
+        <li><a href="#reliability" data-i18n="nav.reliability">Reliability</a></li>
+        <li><a href="#memory" data-i18n="nav.memory">Memory</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a class="nav-ext" href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+
+      <div class="lang">
+        <label class="visually-hidden" for="langSelect" data-i18n="a11y.lang">Language</label>
+        <select id="langSelect" class="lang-select">
+          <option value="en">English</option>
+          <option value="zh-TW">繁體中文</option>
+          <option value="zh-CN">简体中文</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker" data-i18n="hero.eyebrow">Rust systems &amp; trading infrastructure</p>
+        <h1 data-i18n="hero.title">Architect-led, AI-assisted engineering</h1>
+        <p class="lead" data-i18n="hero.sub">Evidence-grounded agents, persistent semantic memory, executable verification, and production-oriented engineering.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#workflow" data-i18n="hero.cta1">View the workflow</a>
+          <a class="btn" href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta2">View GitHub</a>
+        </div>
+      </div>
+
+      <aside class="record" aria-labelledby="recordTitle">
+        <p class="record-head"><span id="recordTitle" data-i18n="hero.record.title">verification record</span> <span class="record-note" data-i18n="hero.record.note">schema</span></p>
+        <dl class="record-body">
+          <div><dt data-i18n="hero.record.k1">claim</dt><dd data-i18n="hero.record.v1">agent states the fan-out never blocks ingest</dd></div>
+          <div><dt data-i18n="hero.record.k2">source of truth</dt><dd data-i18n="hero.record.v2">repository code + integration test</dd></div>
+          <div><dt data-i18n="hero.record.k3">verification</dt><dd data-i18n="hero.record.v3">cargo test — executed, observed</dd></div>
+          <div><dt data-i18n="hero.record.k4">state</dt><dd><span class="state state-ok">CONFIRMED</span></dd></div>
+        </dl>
+        <p class="record-foot" data-i18n="hero.record.foot">Without the third line, the first line is only a claim.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ══ HOW I USE AI ══ -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker" data-i18n="how.kicker">position</p>
+        <h2 data-i18n="how.title">How I use AI</h2>
+        <p class="lead" data-i18n="how.lead">I don't treat AI as a code-generation shortcut. I run agents inside a structured engineering workflow and work primarily as the architect and system designer. Agent output is a proposal: it has to be grounded, constrained and verified before it becomes part of a system.</p>
+      </header>
+
+      <div class="split">
+        <div class="panel">
+          <h3 class="panel-title" data-i18n="how.ai.title">The agent does</h3>
+          <ul class="tick-list">
+            <li data-i18n="how.ai.1">Project evaluation</li>
+            <li data-i18n="how.ai.2">Requirement analysis</li>
+            <li data-i18n="how.ai.3">Architecture planning</li>
+            <li data-i18n="how.ai.4">Code generation</li>
+            <li data-i18n="how.ai.5">Refactoring</li>
+            <li data-i18n="how.ai.6">Implementation</li>
+            <li data-i18n="how.ai.7">White-box testing</li>
+            <li data-i18n="how.ai.8">Black-box testing</li>
+            <li data-i18n="how.ai.9">Integration testing</li>
+            <li data-i18n="how.ai.10">Executable validation</li>
+            <li data-i18n="how.ai.11">Documentation</li>
+            <li data-i18n="how.ai.12">Long-term project memory</li>
+          </ul>
+        </div>
+
+        <div class="panel panel-accent">
+          <h3 class="panel-title" data-i18n="how.human.title">I stay responsible for</h3>
+          <ul class="tick-list tick-list-accent">
+            <li data-i18n="how.human.1">Architecture</li>
+            <li data-i18n="how.human.2">Constraints</li>
+            <li data-i18n="how.human.3">Trade-offs</li>
+            <li data-i18n="how.human.4">Acceptance criteria</li>
+            <li data-i18n="how.human.5">Risk</li>
+            <li data-i18n="how.human.6">Verification</li>
+            <li data-i18n="how.human.7">Final decisions</li>
+          </ul>
+          <p class="panel-note" data-i18n="how.note">AI is not an authority in this workflow. It is an engineering worker whose output is reviewed like any other contribution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WORKFLOW ══ -->
+  <section class="section section-alt" id="workflow">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker" data-i18n="wf.kicker">process</p>
+        <h2 data-i18n="wf.title">End-to-end engineering workflow</h2>
+        <p class="lead" data-i18n="wf.lead">The same sequence runs from a first feasibility read through to what gets written back into long-term memory. Each stage has an output someone else could check.</p>
+      </header>
+
+      <ol class="timeline">
+        <li>
+          <span class="tl-num" aria-hidden="true">01</span>
+          <h3 data-i18n="wf.s1.t">Project evaluation</h3>
+          <p data-i18n="wf.s1.d">Scope, feasibility, and whether the problem is worth solving in the shape it arrived in.</p>
+        </li>
+        <li>
+          <span class="tl-num" aria-hidden="true">02</span>
+          <h3 data-i18n="wf.s2.t">Evidence collection</h3>
+          <p data-i18n="wf.s2.d">Inspect the repository, documentation, schemas, interfaces and runtime state before deciding anything.</p>
+        </li>
+        <li>
+          <span class="tl-num" aria-hidden="true">03</span>
+          <h3 data-i18n="wf.s3.t">Architecture and constraints</h3>
+          <p data-i18n="wf.s3.d">Boundaries, invariants, latency budget and failure behaviour — defined by me, stated explicitly to the agent.</p>
+        </li>
+        <li>
+          <span class="tl-num" aria-hidden="true">04</span>
+          <h3 data-i18n="wf.s4.t">Implementation planning</h3>
+          <p data-i18n="wf.s4.d">Decomposition into tasks small enough to review and verify one at a time.</p>
+        </li>
+        <li>
+          <span class="tl-num" aria-hidden="true">05</span>
+          <h3 data-i18n="wf.s5.t">AI-assisted development</h3>
+          <p data-i18n="wf.s5.d">Code generation, refactoring and test drafting, bounded by the constraints set in stage three.</p>
+        </li>
+        <li>
+          <span class="tl-num" aria-hidden="true">06</span>
+          <h3 data-i18n="wf.s6.t">Executable verification</h3>
+          <p data-i18n="wf.s6.d">Compiler, test suites, integration and black-box runs, benchmarks, runtime observation, diff review.</p>
+        </li>
+        <li>
+          <span class="tl-num" aria-hidden="true">07</span>
+          <h3 data-i18n="wf.s7.t">Post-implementation review</h3>
+          <p data-i18n="wf.s7.d">Compare the result against the acceptance criteria — not against the agent's own summary of its work.</p>
+        </li>
+        <li>
+          <span class="tl-num" aria-hidden="true">08</span>
+          <h3 data-i18n="wf.s8.t">Persistent knowledge update</h3>
+          <p data-i18n="wf.s8.d">Verified conclusions, and only verified conclusions, are written back into long-term project memory.</p>
+        </li>
+      </ol>
+
+      <div class="split split-tight">
+        <div class="panel">
+          <h3 class="panel-title" data-i18n="wf.sys1.t">System one — reliability</h3>
+          <p data-i18n="wf.sys1.d">Hallucination control. Keeps the agent grounded in the actual system rather than in model priors.</p>
+          <a class="inline-link" href="#reliability" data-i18n="wf.sys1.link">Three-layer model</a>
+        </div>
+        <div class="panel">
+          <h3 class="panel-title" data-i18n="wf.sys2.t">System two — context</h3>
+          <p data-i18n="wf.sys2.d">Persistent memory. Keeps knowledge from being lost between sessions and rediscovered at cost.</p>
+          <a class="inline-link" href="#memory" data-i18n="wf.sys2.link">Semantic memory</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ RELIABILITY ══ -->
+  <section class="section" id="reliability">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker" data-i18n="rel.kicker">reliability</p>
+        <h2 data-i18n="rel.title">Three-layer hallucination control</h2>
+        <p class="lead" data-i18n="rel.lead">This does not eliminate hallucination. It is designed to reduce the risk and to make unsupported claims easy to detect — early, and by something other than the model.</p>
+      </header>
+
+      <div class="layers">
+        <article class="layer">
+          <p class="layer-num" aria-hidden="true">01</p>
+          <h3 data-i18n="rel.l1.t">Evidence-driven instruction</h3>
+          <p class="layer-rule" data-i18n="rel.l1.rule">Inspect before acting. Evidence before assumptions.</p>
+          <p data-i18n="rel.l1.d">Before implementation, the agent is instructed to inspect the real environment — code, documentation, interfaces, schemas, runtime state, data — and to bring back what it found. The instruction framework matters; the product name behind it does not. Model knowledge is never allowed to stand in as project truth.</p>
+        </article>
+
+        <article class="layer">
+          <p class="layer-num" aria-hidden="true">02</p>
+          <h3 data-i18n="rel.l2.t">Explicit source of truth</h3>
+          <p class="layer-rule" data-i18n="rel.l2.rule">Unknown is a valid state.</p>
+          <p data-i18n="rel.l2.d">Execution defines which sources are authoritative: repository code, architecture documents, API schemas, specifications, tests, runtime behaviour, real datasets, verified engineering decisions. Every statement carries a state, so a missing fact never quietly becomes an invented assumption.</p>
+          <ul class="states" aria-label="Claim states">
+            <li><span class="state state-ok">CONFIRMED</span></li>
+            <li><span class="state">INFERRED</span></li>
+            <li><span class="state">PENDING</span></li>
+            <li><span class="state">SPEC GAP</span></li>
+            <li><span class="state state-unknown">UNKNOWN</span></li>
+          </ul>
+        </article>
+
+        <article class="layer">
+          <p class="layer-num" aria-hidden="true">03</p>
+          <h3 data-i18n="rel.l3.t">Executable verification</h3>
+          <p class="layer-rule" data-i18n="rel.l3.rule">A claim is not proof. An execution result is evidence.</p>
+          <p data-i18n="rel.l3.d">An agent saying that something works proves nothing. Authority belongs to executable systems and observable results, not to the model's explanation of its own output.</p>
+          <ul class="chips chips-mono" aria-label="Verification methods">
+            <li>cargo check</li>
+            <li>cargo test</li>
+            <li data-i18n="rel.l3.m1">integration tests</li>
+            <li data-i18n="rel.l3.m2">white-box tests</li>
+            <li data-i18n="rel.l3.m3">black-box tests</li>
+            <li data-i18n="rel.l3.m4">benchmarks</li>
+            <li data-i18n="rel.l3.m5">runtime observation</li>
+            <li data-i18n="rel.l3.m6">real queries, real output</li>
+            <li>git diff</li>
+          </ul>
+        </article>
+      </div>
+
+      <figure class="figure">
+        <figcaption class="fig-cap" data-i18n="rel.fig.cap">Diagram A — how a claim becomes a verified result</figcaption>
+        <ol class="flow flow-row">
+          <li data-i18n="rel.fig.n1">Instruction</li>
+          <li data-i18n="rel.fig.n2">Evidence collection</li>
+          <li data-i18n="rel.fig.n3">Source of truth</li>
+          <li data-i18n="rel.fig.n4">Implementation</li>
+          <li class="flow-end" data-i18n="rel.fig.n5">Executable verification</li>
+        </ol>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ MEMORY ══ -->
+  <section class="section section-alt" id="memory">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker" data-i18n="mem.kicker">context</p>
+        <h2 data-i18n="mem.title">Persistent semantic memory</h2>
+        <p class="lead" data-i18n="mem.lead">Long projects run across many sessions and many agent contexts. I keep engineering knowledge in a document-backed external memory and retrieve it semantically, instead of reloading an entire knowledge base into every session.</p>
+      </header>
+
+      <div class="mem-grid">
+        <figure class="figure figure-flush">
+          <figcaption class="fig-cap" data-i18n="mem.fig.cap">Diagram B — retrieval and write-back loop</figcaption>
+          <ol class="flow">
+            <li data-i18n="mem.fig.n1">Notion / Markdown knowledge base</li>
+            <li data-i18n="mem.fig.n2">Structured project documents</li>
+            <li data-i18n="mem.fig.n3">Chunking and embeddings</li>
+            <li data-i18n="mem.fig.n4">Vector similarity retrieval</li>
+            <li data-i18n="mem.fig.n5">Relevant context selection</li>
+            <li data-i18n="mem.fig.n6">Agent context injection</li>
+            <li data-i18n="mem.fig.n7">Development session</li>
+            <li data-i18n="mem.fig.n8">Verified findings</li>
+            <li class="flow-end" data-i18n="mem.fig.n9">Knowledge base update</li>
+          </ol>
+        </figure>
+
+        <div class="mem-side">
+          <div class="panel">
+            <h3 class="panel-title" data-i18n="mem.holds.t">What the memory holds</h3>
+            <ul class="tick-list">
+              <li data-i18n="mem.holds.1">Notion workspace and structured Markdown</li>
+              <li data-i18n="mem.holds.2">Project and architecture documentation</li>
+              <li data-i18n="mem.holds.3">Decision records</li>
+              <li data-i18n="mem.holds.4">Research and implementation notes</li>
+              <li data-i18n="mem.holds.5">Verified findings</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel-title" data-i18n="mem.honest.t">What vector search does, and doesn't</h3>
+            <p data-i18n="mem.honest.d">Vector similarity does not guarantee correctness. It improves retrieval relevance and context precision: the agent sees the most semantically relevant documents instead of an indiscriminate dump of the whole knowledge base.</p>
+            <p class="panel-sub" data-i18n="mem.reduce.t">It reduces:</p>
+            <ul class="tick-list">
+              <li data-i18n="mem.reduce.1">Irrelevant context</li>
+              <li data-i18n="mem.reduce.2">Context dilution</li>
+              <li data-i18n="mem.reduce.3">Cross-session knowledge loss</li>
+              <li data-i18n="mem.reduce.4">Repeated rediscovery of the same facts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="gate">
+        <div class="gate-copy">
+          <h3 data-i18n="mem.gate.t">The write-back gate</h3>
+          <p data-i18n="mem.gate.d">Only verified conclusions are promoted into persistent memory. This is what keeps a hallucination from being stored once and then retrieved as established fact by every session after it.</p>
+        </div>
+        <ol class="flow flow-row flow-compact">
+          <li data-i18n="mem.gate.n1">Agent output</li>
+          <li data-i18n="mem.gate.n2">Verification</li>
+          <li data-i18n="mem.gate.n3">Verified knowledge</li>
+          <li class="flow-end" data-i18n="mem.gate.n4">Persistent memory</li>
+        </ol>
+      </div>
+
+      <ul class="chips" aria-label="Terminology">
+        <li data-i18n="mem.term.1">Document-backed external memory</li>
+        <li data-i18n="mem.term.2">Semantic retrieval</li>
+        <li data-i18n="mem.term.3">Persistent engineering memory</li>
+        <li data-i18n="mem.term.4">RAG-style context retrieval</li>
+        <li data-i18n="mem.term.5">Vector similarity search</li>
+        <li data-i18n="mem.term.6">Context injection</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ ARCHITECT-LED ══ -->
+  <section class="section" id="architect">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker" data-i18n="arch.kicker">role</p>
+        <h2 data-i18n="arch.title">Architect-led development</h2>
+        <p class="lead" data-i18n="arch.lead">I increasingly work at the architecture and orchestration layer rather than typing every implementation detail by hand. This is AI-augmented engineering — the judgement, the constraints and the accountability stay with me.</p>
+      </header>
+
+      <div class="arch-grid">
+        <ol class="flow flow-chain">
+          <li data-i18n="arch.n1">Define system boundaries</li>
+          <li data-i18n="arch.n2">Define constraints</li>
+          <li data-i18n="arch.n3">Break down tasks</li>
+          <li data-i18n="arch.n4">Delegate to agents</li>
+          <li data-i18n="arch.n5">Review implementation</li>
+          <li data-i18n="arch.n6">Verify results</li>
+          <li class="flow-end" data-i18n="arch.n7">Integrate knowledge</li>
+        </ol>
+
+        <div class="arch-side">
+          <h3 class="panel-title" data-i18n="arch.used.t">Used on real engineering work</h3>
+          <ul class="two-col">
+            <li data-i18n="arch.used.1">Project feasibility evaluation</li>
+            <li data-i18n="arch.used.2">Legacy system analysis</li>
+            <li data-i18n="arch.used.3">Software architecture</li>
+            <li data-i18n="arch.used.4">System decomposition</li>
+            <li data-i18n="arch.used.5">Implementation planning</li>
+            <li data-i18n="arch.used.6">Rust code generation</li>
+            <li data-i18n="arch.used.7">Refactoring</li>
+            <li data-i18n="arch.used.8">White-box testing</li>
+            <li data-i18n="arch.used.9">Black-box testing</li>
+            <li data-i18n="arch.used.10">Integration testing</li>
+            <li data-i18n="arch.used.11">Debugging</li>
+            <li data-i18n="arch.used.12">Performance evaluation</li>
+            <li data-i18n="arch.used.13">Post-implementation review</li>
+            <li data-i18n="arch.used.14">Technical documentation</li>
+          </ul>
+          <ul class="chips" aria-label="Framing">
+            <li data-i18n="arch.tag.1">AI-augmented engineering</li>
+            <li data-i18n="arch.tag.2">Architect-led agent development</li>
+            <li data-i18n="arch.tag.3">Evidence-grounded agent workflow</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CASE STUDIES ══ -->
+  <section class="section section-alt" id="projects">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker" data-i18n="proj.kicker">evidence</p>
+        <h2 data-i18n="proj.title">AI-assisted engineering case studies</h2>
+        <p class="lead" data-i18n="proj.lead">Two Rust projects built with this workflow. Both repositories are public; the reasoning is in the READMEs.</p>
+      </header>
+
+      <!-- PROJECT 1 -->
+      <article class="case">
+        <header class="case-head">
+          <div>
+            <h3 class="case-name">Market Data Service</h3>
+            <p class="case-tag" data-i18n="p1.tagline">Rust market-data middleware. Take-home engineering assignment from a leading trading firm.</p>
+          </div>
+          <a class="btn btn-small" href="https://github.com/starcorn2020/market-data-service" target="_blank" rel="noopener noreferrer" data-i18n="proj.repo">Repository</a>
+        </header>
+
+        <div class="case-body">
+          <div class="case-main">
+            <h4 class="case-label" data-i18n="proj.bg">Background</h4>
+            <p data-i18n-html="p1.bg">The upstream emits a continuous stream of <code>BookMessage</code> order-book updates across many instruments. The service has to maintain the latest snapshot per instrument, serve request/response snapshot access, publish real-time updates to many subscribers, isolate slow consumers, and keep slow or disconnected clients away from the ingest hot path — for local and remote clients alike. Transport, fan-out behaviour, snapshot representation and wire subscription semantics were deliberately left open as engineering design decisions.</p>
+
+            <h4 class="case-label" data-i18n="proj.decisions">Key decisions</h4>
+            <dl class="dec-list">
+              <div>
+                <dt data-i18n="p1.d1.t">Non-blocking ingest</dt>
+                <dd data-i18n="p1.d1.d">The hot path never waits on subscribers. Fan-out is non-blocking, so a slow consumer cannot back-pressure ingest.</dd>
+              </div>
+              <div>
+                <dt data-i18n="p1.d2.t">Subscriber isolation</dt>
+                <dd data-i18n="p1.d2.d">Each subscriber gets an independent bounded queue. When a queue fills, messages are dropped for that subscriber alone, and a cumulative dropped-message count makes the loss observable rather than silent.</dd>
+              </div>
+              <div>
+                <dt data-i18n="p1.d3.t">Clear abstraction boundary</dt>
+                <dd data-i18n-html="p1.d3.d">The upstream simulator sits behind an <code>Upstream</code> trait, so the real production feed can replace it without changing the rest of the service.</dd>
+              </div>
+              <div>
+                <dt data-i18n="p1.d4.t">Transport</dt>
+                <dd data-i18n="p1.d4.d">gRPC over HTTP/2 for cross-host clients: request/response for snapshots, server streaming for subscriptions.</dd>
+              </div>
+            </dl>
+
+            <h4 class="case-label" data-i18n="proj.tradeoff">Trade-off philosophy</h4>
+            <p data-i18n="p1.trade">The design deliberately favours predictability, failure isolation, correctness and operational safety, while keeping the hot path low-latency and non-blocking.</p>
+            <blockquote class="quote">
+              <p data-i18n="p1.feedback">In the interview discussion, the interviewer described the design as "the safest" among the submissions. I read that as the result of a deliberate trade-off rather than a verdict on which submission was best: a conservative architecture balancing low latency against subscriber isolation, explicit failure behaviour and operational safety.</p>
+            </blockquote>
+          </div>
+
+          <aside class="case-side">
+            <figure class="figure figure-flush">
+              <figcaption class="fig-cap" data-i18n="p1.fig.cap">Ingest and fan-out path</figcaption>
+              <div class="tree" role="img" data-i18n-label="p1.fig.alt" aria-label="FeedSubscriber feeds the ingest loop, which writes latest snapshots into a DashMap and publishes to a pub/sub bus with one bounded queue per subscriber, exposed over tonic gRPC.">
+                <ol class="tree-list" aria-hidden="true">
+                  <li class="tree-node">FeedSubscriber</li>
+                  <li class="tree-node">ingest_loop</li>
+                  <li class="tree-branch">
+                    <ul>
+                      <li>
+                        <span class="tree-leaf" data-i18n="p1.fig.snap">latest snapshots</span>
+                        <span class="tree-leaf">DashMap</span>
+                      </li>
+                      <li>
+                        <span class="tree-leaf" data-i18n="p1.fig.bus">pub/sub bus</span>
+                        <span class="tree-leaf" data-i18n="p1.fig.queue">per-subscriber bounded queue</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tree-node tree-out">tonic gRPC</li>
+                </ol>
+              </div>
+            </figure>
+
+            <h4 class="case-label" data-i18n="proj.myrole">My role</h4>
+            <p class="small" data-i18n="p1.role">System design, constraints, latency and failure requirements, and every trade-off decision.</p>
+
+            <h4 class="case-label" data-i18n="proj.airole">The agent's role</h4>
+            <p class="small" data-i18n="p1.ai">Interpreting the assignment, exploring architectures, laying out trade-offs, implementation planning, Rust code generation, test planning, review support, verification runs.</p>
+
+            <h4 class="case-label" data-i18n="proj.stack">Stack</h4>
+            <ul class="chips chips-mono" aria-label="Technologies">
+              <li>Rust</li>
+              <li>tonic gRPC</li>
+              <li>Tokio</li>
+              <li>DashMap</li>
+              <li data-i18n="p1.stack.1">bounded queues</li>
+              <li data-i18n="p1.stack.2">deterministic integration tests</li>
+            </ul>
+
+            <h4 class="case-label" data-i18n="proj.read">Read more</h4>
+            <ul class="link-list">
+              <li><a href="https://github.com/starcorn2020/market-data-service/blob/master/README.md" target="_blank" rel="noopener noreferrer" data-i18n="p1.link.assignment">Original assignment</a></li>
+              <li><a href="https://github.com/starcorn2020/market-data-service/blob/master/crates/marketdata-service/README.md" target="_blank" rel="noopener noreferrer" data-i18n="p1.link.impl">Implementation and design notes</a></li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="case">
+        <header class="case-head">
+          <div>
+            <h3 class="case-name">EdgeX Singer</h3>
+            <p class="case-tag" data-i18n="p2.tagline">A Rust-side Stark signing compatibility layer, built for an EdgeX exchange integration.</p>
+          </div>
+          <a class="btn btn-small" href="https://github.com/starcorn2020/edgex_singer" target="_blank" rel="noopener noreferrer" data-i18n="proj.repo">Repository</a>
+        </header>
+
+        <div class="case-body">
+          <div class="case-main">
+            <h4 class="case-label" data-i18n="proj.bg">Background</h4>
+            <p data-i18n="p2.bg">While building an EdgeX exchange integration at Binquant, the exchange required Stark-based cryptographic signing. The Rust StarkNet-related libraries available at the time did not produce signatures compatible with the exchange's required authentication flow. With AI assistance I investigated the signing algorithm and implemented the Rust-side cryptographic logic the integration needed.</p>
+
+            <h4 class="case-label" data-i18n="proj.problem">Engineering problem</h4>
+            <p data-i18n="p2.prob">Reproducing the signing pipeline end to end: StarkCurve elliptic-curve operations, Pedersen hashing, order hash construction, deterministic signing, L2 order fields, fee calculation and key derivation — each step matching the exchange byte for byte, because a signature is either accepted or it is not.</p>
+
+            <h4 class="case-label" data-i18n="proj.outcome">Outcome</h4>
+            <p data-i18n="p2.outcome">A working Rust implementation that produces signatures the exchange accepts, integrated into the trading-system's exchange connectivity workflow.</p>
+            <p class="note" data-i18n="p2.note">This is an implementation and compatibility solution. StarkCurve, Pedersen hashing and the StarkNet signing scheme are existing designs; the work here is reproducing them correctly in Rust.</p>
+          </div>
+
+          <aside class="case-side">
+            <h4 class="case-label" data-i18n="p2.impl.t">Implemented components</h4>
+            <ul class="chips chips-mono" aria-label="Implemented components">
+              <li>ec_add</li>
+              <li>ec_double</li>
+              <li>mod_inverse</li>
+              <li data-i18n="p2.impl.1">Pedersen hash</li>
+              <li data-i18n="p2.impl.2">limit-order hash</li>
+              <li data-i18n="p2.impl.3">StarkNet-style signing</li>
+              <li data-i18n="p2.impl.4">L2 order-field construction</li>
+              <li data-i18n="p2.impl.5">private-key derivation</li>
+            </ul>
+
+            <h4 class="case-label" data-i18n="proj.airole">The agent's role</h4>
+            <p class="small" data-i18n="p2.ai">Investigating specifications, comparing implementations, translating algorithm concepts into Rust, debugging incompatibilities, generating implementation scaffolding, validating intermediate calculations against known values.</p>
+
+            <h4 class="case-label" data-i18n="proj.myrole">My role</h4>
+            <p class="small" data-i18n="p2.role">Defining the correctness requirements, verifying compatibility against the exchange, reviewing the cryptographic behaviour, and integrating the result into the trading system.</p>
+
+            <h4 class="case-label" data-i18n="proj.stack">Stack</h4>
+            <ul class="chips chips-mono" aria-label="Technologies">
+              <li>Rust</li>
+              <li>num-bigint</li>
+              <li>starknet-crypto</li>
+              <li>serde</li>
+              <li>rust_decimal</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══ PRINCIPLES ══ -->
+  <section class="section" id="principles">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker" data-i18n="princ.kicker">principles</p>
+        <h2 data-i18n="princ.title">Engineering principles</h2>
+      </header>
+
+      <ul class="principles">
+        <li data-i18n="princ.1">Evidence before assumptions.</li>
+        <li data-i18n="princ.2">Unknown is better than invented.</li>
+        <li data-i18n="princ.3">AI output is a proposal, not an authority.</li>
+        <li data-i18n="princ.4">Executable results outrank explanations.</li>
+        <li data-i18n="princ.5">Only verified knowledge becomes persistent memory.</li>
+        <li data-i18n="princ.6">Architecture and constraints stay human responsibilities.</li>
+        <li data-i18n="princ.7">Optimise context quality, not context quantity.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <div>
+      <p class="foot-name">Jory · <span data-i18n="foot.role">Rust systems and trading infrastructure engineering</span></p>
+      <p class="foot-note" data-i18n="foot.note">Static page. No frameworks, no build step.</p>
+    </div>
+    <ul class="foot-links">
+      <li><a href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer">github.com/starcorn2020</a></li>
+      <li><a href="https://github.com/starcorn2020/market-data-service" target="_blank" rel="noopener noreferrer">market-data-service</a></li>
+      <li><a href="https://github.com/starcorn2020/edgex_singer" target="_blank" rel="noopener noreferrer">edgex_singer</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
