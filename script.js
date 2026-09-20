@@ -236,7 +236,7 @@
     "p1.link.impl": "Implementation and design notes",
 
     "p2.tagline": "A Rust-side Stark signing compatibility layer, built for an EdgeX exchange integration.",
-    "p2.bg": "While building an EdgeX exchange integration at Binquant, the exchange required Stark-based cryptographic signing. The Rust StarkNet-related libraries available at the time did not produce signatures compatible with the exchange's required authentication flow. With AI assistance I investigated the signing algorithm and implemented the Rust-side cryptographic logic the integration needed.",
+    "p2.bg": "While building an EdgeX exchange integration at Binquant, the exchange required Stark-based cryptographic signing. The Rust StarkNet-related libraries available at the time did not produce signatures compatible with the exchange's required authentication flow. I researched the requirement and decomposed the underlying algorithm myself, then directed AI to produce the Rust implementation and reworked the code by hand until the exchange accepted the signatures. AI was nowhere near autonomous at that point — a large part of this was carried by hand.",
     "p2.prob": "Reproducing the signing pipeline end to end: StarkCurve elliptic-curve operations, Pedersen hashing, order hash construction, deterministic signing, L2 order fields, fee calculation and key derivation — each step matching the exchange byte for byte, because a signature is either accepted or it is not.",
     "p2.outcome": "A working Rust implementation that produces signatures the exchange accepts, integrated into the trading system's exchange connectivity workflow.",
     "p2.note": "This is an implementation and compatibility solution. StarkCurve, Pedersen hashing and the StarkNet signing scheme are existing designs; the work here is reproducing them correctly in Rust.",
@@ -246,8 +246,8 @@
     "p2.impl.3": "StarkNet-style signing",
     "p2.impl.4": "L2 order-field construction",
     "p2.impl.5": "private-key derivation",
-    "p2.ai": "Investigating specifications, comparing implementations, translating algorithm concepts into Rust, debugging incompatibilities, generating implementation scaffolding, validating intermediate calculations against known values.",
-    "p2.role": "Defining the correctness requirements, verifying compatibility against the exchange, reviewing the cryptographic behaviour, and integrating the result into the trading system.",
+    "p2.ai": "Producing Rust code against the algorithm breakdown I had already worked out, comparing existing implementations, generating implementation scaffolding, and validating intermediate calculations against known values.",
+    "p2.role": "Researching the exchange's signing requirement, decomposing the underlying cryptographic algorithm, directing and rewriting the generated code, verifying compatibility against the exchange, and integrating the result into the trading system.",
 
     "princ.kicker": "principles",
     "princ.title": "Engineering principles",
@@ -477,7 +477,7 @@
     "p1.link.impl": "實作與設計說明",
 
     "p2.tagline": "為 EdgeX 交易所串接而寫的 Rust 端 Stark 簽章相容層。",
-    "p2.bg": "在 Binquant 進行 EdgeX 交易所串接時，該交易所要求使用 Stark 系列的密碼學簽章。當時可用的 Rust StarkNet 相關函式庫，無法產生與交易所認證流程相容的簽章。我在 AI 協助下研究其簽章演算法，並實作出串接所需的 Rust 端密碼學邏輯。",
+    "p2.bg": "在 Binquant 進行 EdgeX 交易所串接時，該交易所要求使用 Stark 系列的密碼學簽章。當時可用的 Rust StarkNet 相關函式庫，無法產生與交易所認證流程相容的簽章。我自行研究需求、拆解底層演算法邏輯，再讓 AI 依此產出 Rust 實作，並親手修改程式碼，直到簽章被交易所接受。當時的 AI 還遠不到能自動完成這類工作，很大一部分是靠人力推進的。",
     "p2.prob": "必須完整重現整條簽章流程：StarkCurve 橢圓曲線運算、Pedersen 雜湊、訂單雜湊建構、確定性簽章、L2 訂單欄位、手續費計算與金鑰推導 — 每一步都要與交易所逐位元一致，因為簽章只有被接受與不被接受兩種結果。",
     "p2.outcome": "一份可運作的 Rust 實作，能產生交易所接受的簽章，並整合進交易系統的交易所連線流程。",
     "p2.note": "這是一個實作與相容性解決方案。StarkCurve、Pedersen 雜湊與 StarkNet 簽章機制都是既有設計；這個專案的工作是在 Rust 中正確地重現它們。",
@@ -487,8 +487,8 @@
     "p2.impl.3": "StarkNet 形式的簽章",
     "p2.impl.4": "L2 訂單欄位建構",
     "p2.impl.5": "私鑰推導",
-    "p2.ai": "研究規格、比對不同實作、把演算法概念轉譯為 Rust、除錯相容性問題、產生實作骨架，以及用已知數值驗證中間計算結果。",
-    "p2.role": "定義正確性需求、驗證與交易所的相容性、審查密碼學行為，並將成果整合進交易系統。",
+    "p2.ai": "在我已拆解好的演算法邏輯上產出 Rust 程式碼、比對現有實作、產生實作骨架，以及用已知數值驗證中間計算結果。",
+    "p2.role": "研究交易所的簽章需求、拆解底層密碼學演算法、指揮並修改 AI 產出的程式碼、驗證與交易所的相容性，並將成果整合進交易系統。",
 
     "princ.kicker": "原則",
     "princ.title": "工程原則",
@@ -718,7 +718,7 @@
     "p1.link.impl": "实现与设计说明",
 
     "p2.tagline": "为 EdgeX 交易所对接而写的 Rust 端 Stark 签名兼容层。",
-    "p2.bg": "在 Binquant 做 EdgeX 交易所对接时，该交易所要求使用 Stark 系列的密码学签名。当时可用的 Rust StarkNet 相关库，无法产生与交易所认证流程兼容的签名。我在 AI 协助下研究了签名算法，并实现了对接所需的 Rust 端密码学逻辑。",
+    "p2.bg": "在 Binquant 做 EdgeX 交易所对接时，该交易所要求使用 Stark 系列的密码学签名。当时可用的 Rust StarkNet 相关库，无法产生与交易所认证流程兼容的签名。我自行研究需求、拆解底层算法逻辑，再让 AI 据此产出 Rust 实现，并亲手修改代码，直到签名被交易所接受。当时的 AI 还远不到能自动完成这类工作，很大一部分是靠人力推进的。",
     "p2.prob": "需要完整复现整条签名流水线：StarkCurve 椭圆曲线运算、Pedersen 哈希、订单哈希构造、确定性签名、L2 订单字段、手续费计算与密钥派生 — 每一步都要与交易所逐字节一致，因为签名只有被接受与不被接受两种结果。",
     "p2.outcome": "一份可用的 Rust 实现，能产生交易所接受的签名，并集成进交易系统的交易所连接流程。",
     "p2.note": "这是一个实现与兼容性解决方案。StarkCurve、Pedersen 哈希与 StarkNet 签名机制都是既有设计；这个项目的工作是在 Rust 中正确地复现它们。",
@@ -728,8 +728,8 @@
     "p2.impl.3": "StarkNet 形式的签名",
     "p2.impl.4": "L2 订单字段构造",
     "p2.impl.5": "私钥派生",
-    "p2.ai": "研究规格、比对不同实现、把算法概念转译为 Rust、调试兼容性问题、生成实现骨架，以及用已知数值校验中间计算结果。",
-    "p2.role": "定义正确性需求、验证与交易所的兼容性、评审密码学行为，并将成果集成进交易系统。",
+    "p2.ai": "在我已拆解好的算法逻辑上产出 Rust 代码、比对现有实现、生成实现骨架，以及用已知数值校验中间计算结果。",
+    "p2.role": "研究交易所的签名需求、拆解底层密码学算法、指挥并修改 AI 产出的代码、验证与交易所的兼容性，并将成果集成进交易系统。",
 
     "princ.kicker": "原则",
     "princ.title": "工程原则",
@@ -959,7 +959,7 @@
     "p1.link.impl": "Notes d'implémentation et de conception",
 
     "p2.tagline": "Une couche de compatibilité Rust pour la signature Stark, écrite pour une intégration de l'exchange EdgeX.",
-    "p2.bg": "En construisant l'intégration de l'exchange EdgeX chez Binquant, l'exchange exigeait une signature cryptographique de type Stark. Les bibliothèques Rust liées à StarkNet disponibles à l'époque ne produisaient pas de signatures compatibles avec le flux d'authentification exigé. Avec l'aide de l'IA, j'ai étudié l'algorithme de signature et implémenté la logique cryptographique nécessaire côté Rust.",
+    "p2.bg": "En construisant l'intégration de l'exchange EdgeX chez Binquant, l'exchange exigeait une signature cryptographique de type Stark. Les bibliothèques Rust liées à StarkNet disponibles à l'époque ne produisaient pas de signatures compatibles avec le flux d'authentification exigé. J'ai étudié le besoin et décomposé moi-même l'algorithme sous-jacent, puis j'ai fait produire l'implémentation Rust par l'IA et repris le code à la main jusqu'à ce que l'exchange accepte les signatures. L'IA était alors loin d'être autonome : une grande partie du travail a été portée à la main.",
     "p2.prob": "Reproduire toute la chaîne de signature : opérations sur la courbe elliptique StarkCurve, hachage Pedersen, construction du hash d'ordre, signature déterministe, champs d'ordre L2, calcul des frais et dérivation de clé — chaque étape devant correspondre octet pour octet, puisqu'une signature est acceptée ou ne l'est pas.",
     "p2.outcome": "Une implémentation Rust fonctionnelle qui produit des signatures acceptées par l'exchange, intégrée au flux de connectivité du système de trading.",
     "p2.note": "Il s'agit d'une solution d'implémentation et de compatibilité. StarkCurve, le hachage Pedersen et le schéma de signature StarkNet sont des conceptions existantes ; le travail consiste à les reproduire correctement en Rust.",
@@ -969,8 +969,8 @@
     "p2.impl.3": "signature de type StarkNet",
     "p2.impl.4": "construction des champs d'ordre L2",
     "p2.impl.5": "dérivation de clé privée",
-    "p2.ai": "Étude des spécifications, comparaison d'implémentations, traduction des concepts algorithmiques en Rust, débogage des incompatibilités, génération d'ossature d'implémentation, validation des calculs intermédiaires par rapport à des valeurs connues.",
-    "p2.role": "Définir les exigences de correction, vérifier la compatibilité avec l'exchange, relire le comportement cryptographique et intégrer le résultat au système de trading.",
+    "p2.ai": "Produire du code Rust à partir de la décomposition algorithmique que j'avais déjà établie, comparer les implémentations existantes, générer l'ossature d'implémentation et valider les calculs intermédiaires par rapport à des valeurs connues.",
+    "p2.role": "Étudier l'exigence de signature de l'exchange, décomposer l'algorithme cryptographique sous-jacent, diriger et réécrire le code généré, vérifier la compatibilité avec l'exchange et intégrer le résultat au système de trading.",
 
     "princ.kicker": "principes",
     "princ.title": "Principes d'ingénierie",

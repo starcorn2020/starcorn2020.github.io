@@ -515,7 +515,7 @@
         <div class="case-body">
           <div class="case-main">
             <h4 class="case-label" data-i18n="proj.bg">Background</h4>
-            <p data-i18n="p2.bg">While building an EdgeX exchange integration at Binquant, the exchange required Stark-based cryptographic signing. The Rust StarkNet-related libraries available at the time did not produce signatures compatible with the exchange's required authentication flow. With AI assistance I investigated the signing algorithm and implemented the Rust-side cryptographic logic the integration needed.</p>
+            <p data-i18n="p2.bg">While building an EdgeX exchange integration at Binquant, the exchange required Stark-based cryptographic signing. The Rust StarkNet-related libraries available at the time did not produce signatures compatible with the exchange's required authentication flow. I researched the requirement and decomposed the underlying algorithm myself, then directed AI to produce the Rust implementation and reworked the code by hand until the exchange accepted the signatures. AI was nowhere near autonomous at that point — a large part of this was carried by hand.</p>
 
             <h4 class="case-label" data-i18n="proj.problem">Engineering problem</h4>
             <p data-i18n="p2.prob">Reproducing the signing pipeline end to end: StarkCurve elliptic-curve operations, Pedersen hashing, order hash construction, deterministic signing, L2 order fields, fee calculation and key derivation — each step matching the exchange byte for byte, because a signature is either accepted or it is not.</p>
@@ -539,10 +539,10 @@
             </ul>
 
             <h4 class="case-label" data-i18n="proj.airole">The agent's role</h4>
-            <p class="small" data-i18n="p2.ai">Investigating specifications, comparing implementations, translating algorithm concepts into Rust, debugging incompatibilities, generating implementation scaffolding, validating intermediate calculations against known values.</p>
+            <p class="small" data-i18n="p2.ai">Producing Rust code against the algorithm breakdown I had already worked out, comparing existing implementations, generating implementation scaffolding, and validating intermediate calculations against known values.</p>
 
             <h4 class="case-label" data-i18n="proj.myrole">My role</h4>
-            <p class="small" data-i18n="p2.role">Defining the correctness requirements, verifying compatibility against the exchange, reviewing the cryptographic behaviour, and integrating the result into the trading system.</p>
+            <p class="small" data-i18n="p2.role">Researching the exchange's signing requirement, decomposing the underlying cryptographic algorithm, directing and rewriting the generated code, verifying compatibility against the exchange, and integrating the result into the trading system.</p>
 
             <h4 class="case-label" data-i18n="proj.stack">Stack</h4>
             <ul class="chips chips-mono" aria-label="Technologies">
