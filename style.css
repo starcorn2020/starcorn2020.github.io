@@ -637,7 +637,6 @@ code { font-family: var(--mono); font-size: 0.9em; color: var(--brass); }
   align-items: flex-start;
 }
 .foot-name { font-size: 0.92rem; color: var(--text-2); margin-bottom: 0.3rem; }
-.foot-note { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); margin: 0; }
 .foot-links { display: grid; gap: 0.35rem; }
 .foot-links a { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
 .foot-links a:hover { color: var(--brass); }

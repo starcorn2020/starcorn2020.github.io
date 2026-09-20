@@ -38,7 +38,7 @@
     "nav.projects": "Projects",
 
     "hero.eyebrow": "Rust systems & trading infrastructure",
-    "hero.title": "Architect-led, AI-assisted engineering",
+    "hero.title": "I drive AI development as the architect",
     "hero.sub": "Evidence-grounded agents, persistent semantic memory, executable verification, and production-oriented engineering.",
     "hero.cta1": "View the workflow",
     "hero.cta2": "View GitHub",
@@ -259,8 +259,7 @@
     "princ.6": "Architecture and constraints stay human responsibilities.",
     "princ.7": "Optimise context quality, not context quantity.",
 
-    "foot.role": "Rust systems and trading infrastructure engineering",
-    "foot.note": "Static page. No frameworks, no build step."
+    "foot.role": "Rust systems and trading infrastructure engineering"
   };
 
   I18N["zh-TW"] = {
@@ -280,7 +279,7 @@
     "nav.projects": "專案",
 
     "hero.eyebrow": "Rust 系統與交易基礎設施",
-    "hero.title": "以架構師為主導的 AI 輔助工程",
+    "hero.title": "我以架構師的角度驅動 AI 開發",
     "hero.sub": "以證據為基礎的 AI agent、持久化語意記憶、可執行驗證，以及面向生產環境的工程實踐。",
     "hero.cta1": "查看工作流程",
     "hero.cta2": "前往 GitHub",
@@ -501,8 +500,7 @@
     "princ.6": "架構與約束始終是人的責任。",
     "princ.7": "要優化的是脈絡品質，不是脈絡數量。",
 
-    "foot.role": "Rust 系統與交易基礎設施工程",
-    "foot.note": "純靜態頁面，無框架、無建置流程。"
+    "foot.role": "Rust 系統與交易基礎設施工程"
   };
 
   I18N["zh-CN"] = {
@@ -522,7 +520,7 @@
     "nav.projects": "项目",
 
     "hero.eyebrow": "Rust 系统与交易基础设施",
-    "hero.title": "以架构师为主导的 AI 辅助工程",
+    "hero.title": "我以架构师的角度驱动 AI 开发",
     "hero.sub": "以证据为基础的 AI agent、持久化语义记忆、可执行验证，以及面向生产环境的工程实践。",
     "hero.cta1": "查看工作流",
     "hero.cta2": "前往 GitHub",
@@ -743,8 +741,7 @@
     "princ.6": "架构与约束始终是人的责任。",
     "princ.7": "要优化的是上下文质量，而不是上下文数量。",
 
-    "foot.role": "Rust 系统与交易基础设施工程",
-    "foot.note": "纯静态页面，无框架、无构建流程。"
+    "foot.role": "Rust 系统与交易基础设施工程"
   };
 
   I18N["fr"] = {
@@ -764,7 +761,7 @@
     "nav.projects": "Projets",
 
     "hero.eyebrow": "Systèmes Rust et infrastructure de trading",
-    "hero.title": "Ingénierie assistée par IA, pilotée par l'architecte",
+    "hero.title": "Je pilote le développement par IA en tant qu'architecte",
     "hero.sub": "Des agents fondés sur les preuves, une mémoire sémantique persistante, une vérification exécutable et une ingénierie orientée production.",
     "hero.cta1": "Voir le processus",
     "hero.cta2": "Voir GitHub",
@@ -985,8 +982,7 @@
     "princ.6": "L'architecture et les contraintes restent des responsabilités humaines.",
     "princ.7": "Optimiser la qualité du contexte, pas sa quantité.",
 
-    "foot.role": "Ingénierie de systèmes Rust et d'infrastructure de trading",
-    "foot.note": "Page statique. Sans framework, sans étape de build."
+    "foot.role": "Ingénierie de systèmes Rust et d'infrastructure de trading"
   };
 
   /* ── apply ─────────────────────────────────────────────────────────── */
