@@ -159,6 +159,49 @@
     </div>
   </section>
 
+  <!-- ══ RESEARCH SO FAR ══ -->
+  <section class="section" id="quant-research">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="qr.title">Research so far</h2>
+      <p class="lead" data-i18n="qr.lead">Deribit BTC and ETH options and perpetuals, on data my own collector records. Every test fixes its data, costs and pass/fail rule before I look at the result, and a rejected hypothesis is logged as a result, not deleted.</p>
+
+      <p class="callout" data-i18n="qr.callout">The main finding so far is a limit, not a signal: across eight days, two assets and 1 to 60 second horizons, no short-term directional effect exceeds about 0.42 bp, against a taker fee of about 5 bp.</p>
+
+      <dl class="rules">
+        <div>
+          <dt data-i18n="qr.1.t">Clean the data before trusting it</dt>
+          <dd data-i18n="qr.1.d">27% of one day's trades arrived more than ten minutes late, and the same trade can arrive up to four times. Counting unique trade IDs instead of rows, and using the venue's own trade counter, gave an absolute bound on lost data of about 1.2%.</dd>
+        </div>
+        <div>
+          <dt data-i18n="qr.2.t">Execution footprints</dt>
+          <dd data-i18n="qr.2.d">I looked for algorithms trading on a fixed rhythm, such as eight fills exactly 12.000 s apart. They exist and are not collection artifacts, but they are too rare to trade: two ordinary options on the main test day, none on the replication day.</dd>
+        </div>
+        <div>
+          <dt data-i18n="qr.3.t">Does option flow lead the underlying?</dt>
+          <dd data-i18n="qr.3.d">No, it follows. The move before an option trade is 2 to 12 times larger than the move after it, and the small move right after is not a market maker's delta hedge (rejected on 5 of 5 days).</dd>
+        </div>
+        <div>
+          <dt data-i18n="qr.4.t">Checking the method itself</dt>
+          <dd data-i18n="qr.4.d">As a positive control, order-flow imbalance does predict the next bar, on 8 of 8 days at 6 to 18 times placebo. It is worth only 0.13 to 0.42 bp and gone within 30 to 60 s. The method works; the limit is in the data.</dd>
+        </div>
+        <div>
+          <dt data-i18n="qr.5.t">Fading large sweeps</dt>
+          <dd data-i18n="qr.5.d">Rejected. 82% (BTC) and 100% (ETH) of the price move from a large aggressive order is still there 300 s later, and larger sweeps revert even less.</dd>
+        </div>
+        <div>
+          <dt data-i18n="qr.6.t">Market making at standard fees</dt>
+          <dd data-i18n="qr.6.d">Rejected on arithmetic. The perpetual maker fee is 46 times the one-tick spread. On options, measured from 82.9M quotes, fees exceed the captured spread before adverse selection is even counted.</dd>
+        </div>
+        <div>
+          <dt data-i18n="qr.7.t">Options relative value</dt>
+          <dd data-i18n="qr.7.d">A strike's bid never exceeded what its neighbouring strikes implied, in about 148,000 checks. The next test is combo arbitrage using Deribit's native multi-leg orders.</dd>
+        </div>
+      </dl>
+
+      <p class="note" data-i18n="qr.note">No strategy has passed yet, so live trading stays off. Moving to live needs my explicit sign-off; the research process cannot grant it.</p>
+    </div>
+  </section>
+
   <footer class="site-foot">
     <p>Jory, <span data-i18n="foot.role">Rust systems engineer</span></p>
     <a href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer">github.com/starcorn2020</a>

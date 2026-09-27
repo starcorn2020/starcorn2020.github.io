@@ -305,6 +305,7 @@ html[lang^="zh"] .hero h1 { max-width: 13em; letter-spacing: 0; }
 }
 
 .note { color: var(--muted) !important; font-size: 0.92rem; }
+#quant-research .rules, #quant-research .note { margin-top: 2rem; }
 
 .case-side { display: grid; gap: 1rem; align-content: start; }
 
