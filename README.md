@@ -8,12 +8,11 @@ This is Jory's personal portfolio. It covers my engineering skills, experience, 
 
 ## Contents
 
-- **How I use AI**: my AI-assisted engineering workflow, from requirements to verification
-- **Reliability**: how I keep AI output grounded in evidence and checked by tests
-- **Case studies**: public Rust projects, each with its reasoning written up in the README
-  - [market-data-service](https://github.com/starcorn2020/market-data-service): Rust market-data middleware
-  - [edgex_singer](https://github.com/starcorn2020/edgex_singer): Rust-side Stark signing compatibility layer
-- **Engineering principles**
+The site has three pages, switched from the left rail:
+
+- **Experience** (`index.html`): four areas of expertise (trading systems, data engineering, distributed systems, operations) and selected projects
+- **Quant** (`quant.html`): quant skills and current quant research
+- **Working with AI** (`ai.html`): how I work with multiple AI agents, how a task runs, how I catch wrong answers, and how project memory carries across sessions
 
 The site is available in English, 繁體中文, 简体中文 and Français. It switches language on the client side, with no page reload.
 
@@ -22,16 +21,22 @@ The site is available in English, 繁體中文, 简体中文 and Français. It s
 This is a plain static site with no build step and no dependencies:
 
 ```
-index.html   page structure and content (default: English)
-style.css    styles
-script.js    i18n dictionaries (en / zh-TW / zh-CN / fr) and navigation
+index.html   experience page (default: English)
+quant.html   quant page
+ai.html      working-with-AI page
+style.css    styles shared by all pages
+script.js    i18n dictionaries (en / zh-TW / zh-CN / fr) shared by all pages
 ```
 
 ## Run locally
 
+Open `index.html` in any browser. Nothing to install and no server needed; this works the same on macOS, Windows and Linux.
+
+If you'd rather serve it over HTTP (closer to how GitHub Pages serves it), any static file server works:
+
 ```bash
-python3 -m http.server 8000
-# open http://localhost:8000
+npx serve .                  # needs Node.js
+python3 -m http.server 8000  # needs Python (not preinstalled on Windows)
 ```
 
 ## Deployment

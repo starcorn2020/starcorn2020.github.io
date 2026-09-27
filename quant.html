@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jory | Quant</title>
+<meta name="description" content="Jory's quantitative skills, from derivatives pricing and time series to strategy implementation, and current quant projects.">
+<meta name="author" content="Jory (starcorn2020)">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jory">
+<meta property="og:title" content="Jory | Quant">
+<meta property="og:description" content="Jory's quantitative skills, from derivatives pricing and time series to strategy implementation, and current quant projects.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jory | Quant">
+<meta name="twitter:description" content="Jory's quantitative skills, from derivatives pricing and time series to strategy implementation, and current quant projects.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d7a5f'/><text x='16' y='22' font-family='monospace' font-size='16' fill='%23ffffff' text-anchor='middle'>J</text></svg>">
+
+<script>
+  /* Avoid a flash of untranslated content when a non-default language is stored. */
+  (function () {
+    try {
+      var stored = localStorage.getItem('lang');
+      if (stored && stored !== 'en') {
+        document.documentElement.classList.add('i18n-pending');
+        setTimeout(function () {
+          document.documentElement.classList.remove('i18n-pending');
+        }, 900);
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+
+<body data-page="quant">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<div class="shell">
+  <aside class="rail">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-text">
+        <strong>Jory</strong>
+        <span class="brand-role" data-i18n="foot.role">Rust systems engineer</span>
+      </span>
+    </a>
+
+    <nav class="pages" data-i18n-label="a11y.pages" aria-label="Pages">
+      <a href="index.html" data-i18n="nav.exp">Experience</a>
+      <a href="quant.html" aria-current="page" data-i18n="nav.quant">Quant</a>
+      <a href="ai.html" data-i18n="nav.ai">Working with AI</a>
+    </nav>
+
+    <div class="rail-foot">
+      <a class="rail-link" href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <label class="visually-hidden" for="langSelect" data-i18n="a11y.lang">Language</label>
+      <select id="langSelect" class="lang-select">
+        <option value="en">English</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+  </aside>
+
+<main id="main" class="content">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="q.hero.title">Quant research, built to trade.</h1>
+      <p class="lead" data-i18n="q.hero.sub">A background in economics, finance and data analysis, plus the engineering to take a strategy from research to live orders.</p>
+    </div>
+  </section>
+
+  <!-- ══ QUANT SKILLS ══ -->
+  <section class="section" id="quant-skills">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="q.skills.title">Quant skills</h2>
+      <p class="lead" data-i18n="q.skills.lead">B.A. in Economics and M.S. in Finance, National Chi Nan University: stochastic processes, derivatives pricing, time series and econometrics, numerical optimization, financial risk management.</p>
+
+      <div class="skill-grid">
+        <div class="skill-item">
+          <h3 data-i18n="q.s1.t">Derivatives pricing</h3>
+          <p data-i18n="q.s1.d">Options and derivatives pricing, and the stochastic processes behind them.</p>
+        </div>
+        <div class="skill-item">
+          <h3 data-i18n="q.s2.t">Time series and data analysis</h3>
+          <p data-i18n="q.s2.d">Time series, econometrics and data analysis, applied to market data and strategy research.</p>
+        </div>
+        <div class="skill-item">
+          <h3 data-i18n="q.s3.t">Risk modeling</h3>
+          <p data-i18n="q.s3.d">Risk models, financial risk management and numerical optimization.</p>
+        </div>
+        <div class="skill-item">
+          <h3 data-i18n="q.s4.t">Strategy implementation</h3>
+          <p data-i18n="q.s4.d">Turning research into running code: backtest data, execution and risk checks. I have supported market-making, arbitrage and alpha desks.</p>
+        </div>
+      </div>
+
+      <ul class="tags tags-spaced">
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>NumPy</li>
+        <li>Rust</li>
+        <li>NautilusTrader</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ QUANT PROJECTS ══ -->
+  <section class="section" id="quant-projects">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="q.proj.title">Current quant projects</h2>
+
+      <article class="case" id="quant-platform">
+        <header class="case-head">
+          <h3 class="case-name" data-i18n="qp.name">Cross-market quant research and execution platform</h3>
+          <p class="case-tag" data-i18n="qp.tagline">A personal research project across spot, perpetuals and options, automated from research to live orders. In progress.</p>
+        </header>
+
+        <div class="case-body">
+          <div class="case-main">
+            <p data-i18n="qp.bg">It links every stage of quant work into one automated pipeline: market data, AI-assisted research, strategy development, backtesting, live execution and Grafana monitoring.</p>
+
+            <dl class="dec-list">
+              <div>
+                <dt data-i18n="qp.d1.t">Research direction</dt>
+                <dd data-i18n="qp.d1.d">I read the literature on options, market making, alpha, market microstructure and quantitative finance to pick research topics and tradable strategies.</dd>
+              </div>
+              <div>
+                <dt data-i18n="qp.d2.t">One engine for backtest and live</dt>
+                <dd data-i18n="qp.d2.d">Built on NautilusTrader, so the same strategy code runs in backtests and live trading, which narrows the gap between research and production.</dd>
+              </div>
+              <div>
+                <dt data-i18n="qp.d3.t">Data and monitoring</dt>
+                <dd data-i18n="qp.d3.d">Market and trading data live in ClickHouse and PostgreSQL, and live execution is monitored in Grafana.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="case-side">
+            <ul class="tags">
+              <li>Rust</li>
+              <li>NautilusTrader</li>
+              <li>PostgreSQL</li>
+              <li>ClickHouse</li>
+              <li>SQLx</li>
+              <li>Docker</li>
+              <li>Grafana</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <p>Jory, <span data-i18n="foot.role">Rust systems engineer</span></p>
+    <a href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer">github.com/starcorn2020</a>
+  </footer>
+</main>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jory | How do I work with AI?</title>
+<meta name="description" content="How Jory uses AI coding agents: who decides what, how output gets checked, and how project knowledge carries across sessions.">
+<meta name="author" content="Jory (starcorn2020)">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jory">
+<meta property="og:title" content="Jory | How do I work with AI?">
+<meta property="og:description" content="How Jory uses AI coding agents: who decides what, how output gets checked, and how project knowledge carries across sessions.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jory | How do I work with AI?">
+<meta name="twitter:description" content="How Jory uses AI coding agents: who decides what, how output gets checked, and how project knowledge carries across sessions.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d7a5f'/><text x='16' y='22' font-family='monospace' font-size='16' fill='%23ffffff' text-anchor='middle'>J</text></svg>">
+
+<script>
+  /* Avoid a flash of untranslated content when a non-default language is stored. */
+  (function () {
+    try {
+      var stored = localStorage.getItem('lang');
+      if (stored && stored !== 'en') {
+        document.documentElement.classList.add('i18n-pending');
+        setTimeout(function () {
+          document.documentElement.classList.remove('i18n-pending');
+        }, 900);
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+
+<body data-page="ai">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<div class="shell">
+  <aside class="rail">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span class="brand-text">
+        <strong>Jory</strong>
+        <span class="brand-role" data-i18n="foot.role">Rust systems engineer</span>
+      </span>
+    </a>
+
+    <nav class="pages" data-i18n-label="a11y.pages" aria-label="Pages">
+      <a href="index.html" data-i18n="nav.exp">Experience</a>
+      <a href="quant.html" data-i18n="nav.quant">Quant</a>
+      <a href="ai.html" aria-current="page" data-i18n="nav.ai">Working with AI</a>
+    </nav>
+
+    <div class="rail-foot">
+      <a class="rail-link" href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <label class="visually-hidden" for="langSelect" data-i18n="a11y.lang">Language</label>
+      <select id="langSelect" class="lang-select">
+        <option value="en">English</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+  </aside>
+
+<main id="main" class="content">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="ai.hero.title">How do I work with AI?</h1>
+      <p class="lead" data-i18n="ai.hero.sub">I work as the architect, directing multiple AI agents that each take a different role in development.</p>
+    </div>
+  </section>
+
+  <!-- ══ WHO DOES WHAT ══ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="ai.split.title">Who does what</h2>
+
+      <div class="split">
+        <div class="split-col split-me">
+          <h3 data-i18n="ai.split.me">I decide</h3>
+          <ul class="plain-list">
+            <li data-i18n="ai.split.me.1">Architecture and system boundaries</li>
+            <li data-i18n="ai.split.me.2">Constraints: latency, and how failures should behave</li>
+            <li data-i18n="ai.split.me.3">Trade-offs and acceptance criteria</li>
+            <li data-i18n="ai.split.me.4">What gets merged</li>
+          </ul>
+        </div>
+        <div class="split-col">
+          <h3 data-i18n="ai.split.ai">AI agents, by role</h3>
+          <ul class="plain-list">
+            <li data-i18n="ai.split.ai.1">Research: reads the code and docs, and cites its sources</li>
+            <li data-i18n="ai.split.ai.2">Implementation: writes code, refactors and docs</li>
+            <li data-i18n="ai.split.ai.3">Testing: writes and runs tests</li>
+            <li data-i18n="ai.split.ai.4">Review: checks each diff against the constraints</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROCESS ══ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="ai.flow.title">How a task goes</h2>
+
+      <ol class="steps">
+        <li>
+          <h3 data-i18n="ai.flow.1.t">Read first</h3>
+          <p data-i18n="ai.flow.1.d">The research agent reads the code, docs and schemas before anything is proposed.</p>
+        </li>
+        <li>
+          <h3 data-i18n="ai.flow.2.t">Set the rules</h3>
+          <p data-i18n="ai.flow.2.d">I define the boundaries, the invariants and what should happen on failure.</p>
+        </li>
+        <li>
+          <h3 data-i18n="ai.flow.3.t">Split the work</h3>
+          <p data-i18n="ai.flow.3.d">Tasks are small enough to review one at a time, and each goes to the agent with the matching role.</p>
+        </li>
+        <li>
+          <h3 data-i18n="ai.flow.4.t">Build and run</h3>
+          <p data-i18n="ai.flow.4.d">The implementation agent writes the code and the testing agent runs the tests. The compiler, tests and benchmarks decide whether it works.</p>
+        </li>
+        <li>
+          <h3 data-i18n="ai.flow.5.t">Review and record</h3>
+          <p data-i18n="ai.flow.5.d">The review agent checks the diff against the constraints. I then check the result against the acceptance criteria and record what was confirmed.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══ CHECKING OUTPUT ══ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="ai.check.title">Catching wrong answers</h2>
+      <p class="lead" data-i18n="ai.check.lead">AI will sometimes make things up. I can't prevent that, but I can make it show up early.</p>
+
+      <dl class="rules">
+        <div>
+          <dt data-i18n="ai.check.1.t">Show the source</dt>
+          <dd data-i18n="ai.check.1.d">Every claim has to point to code, a spec, a test or real data. What the model remembers from training is not a source.</dd>
+        </div>
+        <div>
+          <dt data-i18n="ai.check.2.t">Unknown is an answer</dt>
+          <dd data-i18n="ai.check.2.d">If something can't be confirmed, it is marked unknown instead of guessed.</dd>
+        </div>
+        <div>
+          <dt data-i18n="ai.check.3.t">Only a run counts</dt>
+          <dd data-i18n-html="ai.check.3.d">“It works” means nothing until the tests pass or a real run shows it.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══ MEMORY ══ -->
+  <section class="section">
+    <div class="wrap memory">
+      <div>
+        <h2 class="sec-title" data-i18n="ai.mem.title">Memory across sessions</h2>
+        <p data-i18n="ai.mem.d1">A long project outlives any single AI session. I keep design docs, decisions and confirmed findings in Notion and Markdown. At the start of a session, semantic search pulls in only the parts that matter for the task.</p>
+        <p data-i18n="ai.mem.d2">Only confirmed conclusions are written back, so one wrong answer doesn't get reused as fact later.</p>
+      </div>
+      <ol class="loop" data-i18n-label="ai.mem.alt" aria-label="Notes are searched, used in a session, verified, then written back to the notes.">
+        <li data-i18n="ai.mem.n1">Notes</li>
+        <li data-i18n="ai.mem.n2">Search</li>
+        <li data-i18n="ai.mem.n3">Session</li>
+        <li data-i18n="ai.mem.n4">Verify</li>
+        <li data-i18n="ai.mem.n5">Write back</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══ IN PRACTICE ══ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="ai.ex.title">In practice</h2>
+
+      <ul class="examples">
+        <li>
+          <a class="ex-name" href="https://github.com/starcorn2020/market-data-service" target="_blank" rel="noopener noreferrer">Market Data Service</a>
+          <p data-i18n="ai.ex.1">A take-home assignment from a top proprietary trading firm. AI helped compare designs, generated the Rust code and planned the tests; I made the design and trade-off calls.</p>
+          <p class="ex-highlight" data-i18n="ai.ex.1.hl">The interviewer called it “the safest” design among the submissions.</p>
+        </li>
+        <li>
+          <a class="ex-name" href="https://github.com/starcorn2020/edgex_singer" target="_blank" rel="noopener noreferrer">EdgeX Singer</a>
+          <p data-i18n="ai.ex.2">A mid-2025 project, when AI was less capable. I found the math for AI to implement, then checked that every step matched the exchange bit for bit: curve arithmetic, Pedersen hash, order hash, deterministic signing, L2 fields, fees and key derivation.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="site-foot">
+    <p>Jory, <span data-i18n="foot.role">Rust systems engineer</span></p>
+    <a href="https://github.com/starcorn2020" target="_blank" rel="noopener noreferrer">github.com/starcorn2020</a>
+  </footer>
+</main>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
