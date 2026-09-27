@@ -218,6 +218,7 @@
     "ai.ex.1": "A take-home assignment from a top proprietary trading firm. AI helped compare designs, generated the Rust code and planned the tests; I made the design and trade-off calls.",
     "ai.ex.1.hl": "The interviewer called it “the safest” design among the submissions.",
     "ai.ex.2": "A mid-2025 project, when AI was less capable. I found the math for AI to implement, then checked that every step matched the exchange bit for bit: curve arithmetic, Pedersen hash, order hash, deterministic signing, L2 fields, fees and key derivation.",
+    "ai.ex.2.hl": "Rust had no usable StarkNet signing library, so I built the signing myself and connected EdgeX to the trading system.",
 
     "foot.role": "Systems engineer"
   };
@@ -417,6 +418,7 @@
     "ai.ex.1": "一間頂尖自營交易公司的面試題目。AI 協助比較設計方案、產出 Rust 程式碼並規劃測試，設計與取捨由我決定。",
     "ai.ex.1.hl": "面試官評為所有提交中「最安全」的設計。",
     "ai.ex.2": "2025 年中的專案，當時 AI 能力較差。我找出數學公式讓 AI 實作，再親自驗證每一步與交易所逐位元一致：曲線運算、Pedersen 雜湊、訂單雜湊、確定性簽章、L2 欄位、手續費與金鑰推導。",
+    "ai.ex.2.hl": "Rust 沒有可用的 StarkNet 簽章套件，我自己實作簽章，把 EdgeX 接入交易系統。",
 
     "foot.role": "系統工程師"
   };
@@ -616,6 +618,7 @@
     "ai.ex.1": "一家顶尖自营交易公司的面试题目。AI 协助比较设计方案、生成 Rust 代码并规划测试，设计与取舍由我决定。",
     "ai.ex.1.hl": "面试官评为所有提交中“最安全”的设计。",
     "ai.ex.2": "2025 年中的项目，当时 AI 能力较差。我找出数学公式让 AI 实现，再亲自验证每一步与交易所逐位一致：曲线运算、Pedersen 哈希、订单哈希、确定性签名、L2 字段、手续费与密钥推导。",
+    "ai.ex.2.hl": "Rust 没有可用的 StarkNet 签名库，我自己实现签名，把 EdgeX 接入交易系统。",
 
     "foot.role": "系统工程师"
   };
@@ -815,6 +818,7 @@
     "ai.ex.1": "Un exercice de recrutement d'une grande société de trading pour compte propre. L'IA a aidé à comparer les conceptions, généré le code Rust et planifié les tests ; j'ai tranché la conception et les compromis.",
     "ai.ex.1.hl": "L'intervieweur l'a qualifiée de « la plus sûre » parmi les rendus.",
     "ai.ex.2": "Un projet de mi-2025, quand l'IA était moins capable. J'ai trouvé les formules pour que l'IA les implémente, puis vérifié que chaque étape correspondait à l'exchange bit pour bit : arithmétique de courbe, hachage Pedersen, hachage d'ordre, signature déterministe, champs L2, frais et dérivation de clé.",
+    "ai.ex.2.hl": "Rust n'avait aucune bibliothèque de signature StarkNet utilisable : j'ai implémenté la signature moi-même et connecté EdgeX au système de trading.",
 
     "foot.role": "Ingénieur systèmes"
   };
