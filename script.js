@@ -22,8 +22,8 @@
   var I18N = {};
 
   I18N["en"] = {
-    "meta.exp.title": "Jory | Rust systems engineer",
-    "meta.exp.desc": "Jory, a Rust systems engineer: trading systems, data engineering, distributed systems and operations.",
+    "meta.exp.title": "Jory | Systems engineer",
+    "meta.exp.desc": "Jory, a systems engineer: trading systems, data engineering, distributed systems and operations.",
     "meta.ai.title": "Jory | How do I work with AI?",
     "meta.ai.desc": "How Jory uses AI coding agents: who decides what, how output gets checked, and how project knowledge carries across sessions.",
     "meta.quant.title": "Jory | Quant",
@@ -38,7 +38,7 @@
     "nav.quant": "Quant",
 
     /* experience page */
-    "exp.hero.title": "I'm a Rust systems engineer.",
+    "exp.hero.title": "I'm a systems engineer.",
     "exp.hero.sub": "I work on trading systems, data engineering, distributed systems and operations.",
     "exp.hero.cta": "What I work on",
 
@@ -219,12 +219,12 @@
     "ai.ex.1.hl": "The interviewer called it “the safest” design among the submissions.",
     "ai.ex.2": "A mid-2025 project, when AI was less capable. I found the math for AI to implement, then checked that every step matched the exchange bit for bit: curve arithmetic, Pedersen hash, order hash, deterministic signing, L2 fields, fees and key derivation.",
 
-    "foot.role": "Rust systems engineer"
+    "foot.role": "Systems engineer"
   };
 
   I18N["zh-TW"] = {
-    "meta.exp.title": "Jory | Rust 系統工程師",
-    "meta.exp.desc": "Jory，Rust 系統工程師：交易系統、資料工程、分散式系統與維運。",
+    "meta.exp.title": "Jory | 系統工程師",
+    "meta.exp.desc": "Jory，系統工程師：交易系統、資料工程、分散式系統與維運。",
     "meta.ai.title": "Jory | 我怎麼用 AI 開發？",
     "meta.ai.desc": "Jory 如何使用 AI 寫程式：誰決定什麼、產出怎麼檢查、專案知識怎麼跨對話保存。",
     "meta.quant.title": "Jory | 量化",
@@ -238,7 +238,7 @@
     "nav.ai": "AI 協作方式",
     "nav.quant": "量化",
 
-    "exp.hero.title": "我是 Rust 系統工程師。",
+    "exp.hero.title": "我是系統工程師。",
     "exp.hero.sub": "專長是交易系統、資料工程、分散式系統與維運。",
     "exp.hero.cta": "看專長領域",
 
@@ -418,12 +418,12 @@
     "ai.ex.1.hl": "面試官評為所有提交中「最安全」的設計。",
     "ai.ex.2": "2025 年中的專案，當時 AI 能力較差。我找出數學公式讓 AI 實作，再親自驗證每一步與交易所逐位元一致：曲線運算、Pedersen 雜湊、訂單雜湊、確定性簽章、L2 欄位、手續費與金鑰推導。",
 
-    "foot.role": "Rust 系統工程師"
+    "foot.role": "系統工程師"
   };
 
   I18N["zh-CN"] = {
-    "meta.exp.title": "Jory | Rust 系统工程师",
-    "meta.exp.desc": "Jory，Rust 系统工程师：交易系统、数据工程、分布式系统与运维。",
+    "meta.exp.title": "Jory | 系统工程师",
+    "meta.exp.desc": "Jory，系统工程师：交易系统、数据工程、分布式系统与运维。",
     "meta.ai.title": "Jory | 我怎么用 AI 开发？",
     "meta.ai.desc": "Jory 如何使用 AI 写代码：谁决定什么、产出怎么检查、项目知识怎么跨会话保存。",
     "meta.quant.title": "Jory | 量化",
@@ -437,7 +437,7 @@
     "nav.ai": "AI 协作方式",
     "nav.quant": "量化",
 
-    "exp.hero.title": "我是 Rust 系统工程师。",
+    "exp.hero.title": "我是系统工程师。",
     "exp.hero.sub": "专长是交易系统、数据工程、分布式系统与运维。",
     "exp.hero.cta": "看专长领域",
 
@@ -617,12 +617,12 @@
     "ai.ex.1.hl": "面试官评为所有提交中“最安全”的设计。",
     "ai.ex.2": "2025 年中的项目，当时 AI 能力较差。我找出数学公式让 AI 实现，再亲自验证每一步与交易所逐位一致：曲线运算、Pedersen 哈希、订单哈希、确定性签名、L2 字段、手续费与密钥推导。",
 
-    "foot.role": "Rust 系统工程师"
+    "foot.role": "系统工程师"
   };
 
   I18N["fr"] = {
-    "meta.exp.title": "Jory | Ingénieur systèmes Rust",
-    "meta.exp.desc": "Jory, ingénieur systèmes Rust : systèmes de trading, ingénierie des données, systèmes distribués et exploitation.",
+    "meta.exp.title": "Jory | Ingénieur systèmes",
+    "meta.exp.desc": "Jory, ingénieur systèmes : systèmes de trading, ingénierie des données, systèmes distribués et exploitation.",
     "meta.ai.title": "Jory | Comment est-ce que je travaille avec l'IA ?",
     "meta.ai.desc": "Comment Jory utilise les agents de code IA : qui décide quoi, comment le résultat est vérifié, et comment la connaissance du projet passe d'une session à l'autre.",
     "meta.quant.title": "Jory | Quant",
@@ -636,7 +636,7 @@
     "nav.ai": "Travail avec l'IA",
     "nav.quant": "Quant",
 
-    "exp.hero.title": "Je suis ingénieur systèmes Rust.",
+    "exp.hero.title": "Je suis ingénieur systèmes.",
     "exp.hero.sub": "Je travaille sur les systèmes de trading, l'ingénierie des données, les systèmes distribués et l'exploitation.",
     "exp.hero.cta": "Voir mes domaines",
 
@@ -816,7 +816,7 @@
     "ai.ex.1.hl": "L'intervieweur l'a qualifiée de « la plus sûre » parmi les rendus.",
     "ai.ex.2": "Un projet de mi-2025, quand l'IA était moins capable. J'ai trouvé les formules pour que l'IA les implémente, puis vérifié que chaque étape correspondait à l'exchange bit pour bit : arithmétique de courbe, hachage Pedersen, hachage d'ordre, signature déterministe, champs L2, frais et dérivation de clé.",
 
-    "foot.role": "Ingénieur systèmes Rust"
+    "foot.role": "Ingénieur systèmes"
   };
 
   /* ── apply ─────────────────────────────────────────────────────────── */
