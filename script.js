@@ -84,7 +84,7 @@
     "p1.d2.d": "The control channel and the hardware channel were already separate, which gave a natural split. The UI now runs in the browser with React; domain logic, protocol and hardware I/O live in one Rust service.",
     "p1.d3.t": "Freeze the contracts first",
     "p1.d3.d": "The server protocol has about 75 routes, obfuscated field names and no machine-readable schema. Before the rewrite, I turned the protocol into a schema and recorded real traffic as the regression suite.",
-    "p1.callout": "It was planned as two months of work for one back-end and one front-end engineer. I took it on alone.",
+    "p1.callout": "It was planned as two months of work for a senior back-end and a senior front-end engineer. I took it on alone.",
     "proj.private": "Internal project. The code is not public.",
 
     "pm.name": "Polymarket prediction market integration",
@@ -266,7 +266,7 @@
     "p1.d2.d": "控制通道和硬體通道本來就是分開的，這就是天然的切割線。UI 改用 React 在瀏覽器執行，領域邏輯、協定與硬體 I/O 收進單一 Rust 服務。",
     "p1.d3.t": "先凍結契約",
     "p1.d3.d": "伺服器協定約有 75 個路由，欄位名稱經過混淆，也沒有機器可讀的 schema。改寫前我先把協定整理成 schema，並錄下真實流量作為回歸測試。",
-    "p1.callout": "原本規劃 1 位後端加 1 位前端、為期 2 個月的重構，由我一個人接手。",
+    "p1.callout": "原本規劃 1 位資深後端加 1 位資深前端、為期 2 個月的重構，由我一個人接手。",
     "proj.private": "公司內部專案，程式碼不公開。",
 
     "pm.name": "Polymarket 預測市場接入",
@@ -447,7 +447,7 @@
     "p1.d2.d": "控制通道和硬件通道本来就是分开的，这就是天然的切割线。UI 改用 React 在浏览器运行，领域逻辑、协议与硬件 I/O 收进单一 Rust 服务。",
     "p1.d3.t": "先冻结契约",
     "p1.d3.d": "服务器协议约有 75 个路由，字段名称经过混淆，也没有机器可读的 schema。改写前我先把协议整理成 schema，并录下真实流量作为回归测试。",
-    "p1.callout": "原本规划 1 位后端加 1 位前端、为期 2 个月的重构，由我一个人接手。",
+    "p1.callout": "原本规划 1 位资深后端加 1 位资深前端、为期 2 个月的重构，由我一个人接手。",
     "proj.private": "公司内部项目，代码不公开。",
 
     "pm.name": "Polymarket 预测市场接入",
@@ -628,7 +628,7 @@
     "p1.d2.d": "Le canal de contrôle et le canal matériel étaient déjà séparés, ce qui donnait une découpe naturelle. L'interface tourne désormais dans le navigateur avec React ; logique métier, protocole et E/S matérielles vivent dans un seul service Rust.",
     "p1.d3.t": "Figer les contrats d'abord",
     "p1.d3.d": "Le protocole serveur compte environ 75 routes, des noms de champs obfusqués et aucun schéma lisible par machine. Avant la réécriture, j'ai décrit le protocole dans un schéma et enregistré du trafic réel comme suite de régression.",
-    "p1.callout": "Prévue sur deux mois pour un développeur back-end et un front-end, la refonte a été reprise par moi seul.",
+    "p1.callout": "Prévue sur deux mois pour un développeur back-end senior et un front-end senior, la refonte a été reprise par moi seul.",
     "proj.private": "Projet interne. Le code n'est pas public.",
 
     "pm.name": "Intégration des marchés prédictifs Polymarket",
