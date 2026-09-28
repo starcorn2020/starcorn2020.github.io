@@ -17,7 +17,7 @@
   - `index.html`：經歷，含四個專長領域與四個專案
   - `quant.html`：量化，含技能、個人研究平台與研究結果
   - `ai.html`：AI 協作方式
-- **四種語言**：en（預設）、zh-TW、zh-CN、fr。所有字串都在 `script.js`，改任何文字都要四種語言一起改。
+- **五種語言**：en（預設）、zh-TW、zh-CN、fr、ko。所有字串都在 `script.js`，改任何文字都要五種語言一起改。使用者只給中文或英文的改動時，由 agent 翻成其他語言；使用者看不懂法文和韓文，交付時要提醒這兩種是 agent 翻的。
 
 ## 和使用者合作
 
@@ -39,10 +39,13 @@ index.html      經歷頁（首頁，data-page="exp"）
 quant.html      量化頁（data-page="quant"）
 ai.html         AI 協作方式頁（data-page="ai"）
 style.css       三頁共用樣式
-script.js       四種語言字典 + 套用邏輯
+script.js       五種語言字典 + 套用邏輯
 og.png          分享連結用的預覽圖（1200×627，三頁共用）
+robots.txt      允許所有爬蟲，指向 sitemap
+sitemap.xml     三頁的網址清單，新增頁面時要加
 README.md       給人看的專案說明
 doc/            本資料夾，給 agent 看的交接文件
+.nojekyll       讓 GitHub Pages 跳過 Jekyll，直接發布原始檔（見 workflow.md）
 .agents/skills/ 設計用的 agent skills（Codex 讀這裡）
 .claude/skills  → ../.agents/skills 的 symlink（Claude Code 讀這裡）
 ```

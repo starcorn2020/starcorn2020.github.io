@@ -13,7 +13,7 @@ python3 -m http.server 8000  # 需要 Python
 
 ### 1. 翻譯 key 一致性
 
-確認四種語言的 key 集合相同、HTML 用到的 key 都存在、沒有多餘的 key。三個 `missing` 和 `unused` 都要是空陣列：
+確認五種語言的 key 集合相同、HTML 用到的 key 都存在、沒有多餘的 key。每個語言的 `missing` 和 `unused` 都要是空陣列：
 
 ```bash
 node -e '
@@ -84,6 +84,10 @@ CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 - **直接推 `main`**：這個 repo 沒有其他分支，也沒有 PR 流程。
 
 ## 確認部署
+
+根目錄的 `.nojekyll` 不能刪。沒有它，GitHub Pages 會用 Jekyll 建置，而 Jekyll 會把 `doc/` 裡的 `{{` 當成模板語法而建置失敗，網站就停在舊版。
+
+建置失敗時，`pages/builds/latest` 會一直停在 `building`。用 `gh run list -L 3` 看狀態，`gh run view <id> --log-failed` 看錯誤。
 
 push 後等 GitHub Pages 建置完成，再確認線上版本：
 
