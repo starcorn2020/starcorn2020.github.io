@@ -58,3 +58,7 @@ The design work uses agent skills, checked into the repo so that both [Claude Co
 | `design-taste-frontend` | [taste-skill](https://github.com/Leonxlnx/taste-skill) | Anti-slop rules and a pre-flight checklist for landing pages and portfolios |
 
 Both agents load these skills automatically when they run in this repo. To add or update a skill, edit it under `.agents/skills/` only.
+
+## Docs for AI agents
+
+Handover docs for new agent sessions live in [`doc/`](doc/README.md): architecture, content and confidentiality rules, and the verify / deploy workflow.
