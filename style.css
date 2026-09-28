@@ -261,23 +261,10 @@ html[lang^="zh"] .hero h1 { max-width: 13em; letter-spacing: 0; }
 .domain:first-child { border-top: 0; padding-top: 0.5rem; }
 .domain:last-child { padding-bottom: 0; }
 
-.domain-head h3 { font-size: 1.2rem; margin-bottom: 0.45rem; }
-.domain-head p { color: var(--muted); font-size: 0.95rem; }
+.domain-head h3 { font-size: 1.2rem; }
 
 .domain-body { display: grid; gap: 1.1rem; }
-.domain-points li {
-  position: relative;
-  padding-left: 1.1rem;
-  color: var(--text-2);
-  margin-bottom: 0.5rem;
-}
-.domain-points li:last-child { margin-bottom: 0; }
-.domain-points li::before {
-  content: "";
-  position: absolute; left: 0; top: 0.72em;
-  width: 0.45rem; height: 2px;
-  background: var(--accent);
-}
+.domain-desc { color: var(--text-2); margin: 0; }
 
 .case { padding-block: 2rem; border-top: 1px solid var(--line-soft); }
 .case:first-of-type { border-top: 0; padding-top: 0; }
