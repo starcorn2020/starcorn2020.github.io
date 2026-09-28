@@ -14,7 +14,7 @@ The site has three pages, switched from the left rail:
 - **Quant** (`quant.html`): quant skills and current quant research
 - **Working with AI** (`ai.html`): how I work with multiple AI agents, how a task runs, how I catch wrong answers, and how project memory carries across sessions
 
-The site is available in English, 繁體中文, 简体中文 and Français. It switches language on the client side, with no page reload.
+The site is available in English, 繁體中文, 简体中文, Français and 한국어. It switches language on the client side, with no page reload.
 
 ## Tech stack
 
@@ -25,7 +25,10 @@ index.html   experience page (default: English)
 quant.html   quant page
 ai.html      working-with-AI page
 style.css    styles shared by all pages
-script.js    i18n dictionaries (en / zh-TW / zh-CN / fr) shared by all pages
+script.js    i18n dictionaries (en / zh-TW / zh-CN / fr / ko) shared by all pages
+og.png       link preview image shared by all pages
+robots.txt   crawler rules, points to the sitemap
+sitemap.xml  list of page URLs for search engines
 ```
 
 ## Run locally

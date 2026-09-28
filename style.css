@@ -19,7 +19,7 @@
   --accent-tint: #e6f2ee;
 
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "PingFang SC", "Noto Sans TC", "Noto Sans SC",
-          "Microsoft JhengHei", "Hiragino Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
+          "Microsoft JhengHei", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Hiragino Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", "Cascadia Mono", Menlo, Consolas, monospace;
 
   --radius: 6px;
@@ -199,6 +199,9 @@ code {
 }
 /* CJK glyphs are about 2ch wide, so give Chinese headlines more room */
 html[lang^="zh"] .hero h1 { max-width: 13em; letter-spacing: 0; }
+/* Korean wraps between words, not inside them */
+html[lang="ko"] body { word-break: keep-all; }
+html[lang="ko"] .hero h1 { max-width: 13em; letter-spacing: 0; }
 
 .lead {
   color: var(--text-2);

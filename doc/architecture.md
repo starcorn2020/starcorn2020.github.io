@@ -18,11 +18,19 @@
 
 `<head>` 裡的 `<title>`、description、og、twitter meta 每頁各自寫一份英文預設值。`og:image` 三頁都指向 `https://starcorn2020.github.io/og.png`，`og:url` 則各自是自己的網址。
 
+### SEO
+
+- 每頁有 `<link rel="canonical">`，指向自己的網址，和 `og:url` 相同。
+- `index.html` 有一段 JSON-LD（schema.org `Person`）：名字、職稱、網址、`sameAs` 連到 LinkedIn 與 GitHub。**網站上只寫「Jory」，使用者還沒決定要不要公開全名，不要自己加。**職稱或定位改變時這裡也要改。
+- 根目錄的 `robots.txt` 指向 `sitemap.xml`，`sitemap.xml` 列出三頁的網址。
+- 多語系是 JS 切換，搜尋引擎只會收錄英文。要讓其他語言被收錄，得改成每個語言一個網址，目前不做。
+- Google Search Console 還沒提交，使用者之後有需要再做。
+
 ## 多語系（`script.js`）
 
 ### 運作方式
 
-- `I18N["en" | "zh-TW" | "zh-CN" | "fr"]` 是四個扁平的 key → 字串字典。
+- `I18N["en" | "zh-TW" | "zh-CN" | "fr" | "ko"]` 是五個扁平的 key → 字串字典。
 - 頁面上的元素用屬性綁定 key：
 
 | 屬性 | 效果 |
@@ -39,7 +47,7 @@
 ### 兩個必須同步的地方
 
 1. **HTML 內的英文預設文字**必須和 `I18N["en"]` 的值一致。英文使用者看到的是 HTML，不是字典。
-2. **四種語言的 key 集合**必須相同，而且每個 key 都要在某個 HTML 裡用到。
+2. **五種語言的 key 集合**必須相同，而且每個 key 都要在某個 HTML 裡用到。
 
 ### Key 命名
 
@@ -56,18 +64,18 @@
 | `q.*`、`qp.*`、`qr.*` | 量化頁：技能、平台專案、研究結果 |
 | `ai.*` | AI 協作方式頁 |
 
-字典內的順序是 meta → 共用 → 經歷頁 → 量化頁（`/* quant page */`）→ AI 頁（`/* AI page */`）→ `foot.role`。新增 key 時四種語言放在同一個相對位置。
+字典內的順序是 meta → 共用 → 經歷頁 → 量化頁（`/* quant page */`）→ AI 頁（`/* AI page */`）→ `foot.role`。新增 key 時五種語言放在同一個相對位置。字典順序是 en → zh-TW → zh-CN → fr → ko。
 
 ### 修改字串的安全做法
 
-四種語言的同一個 key 分散在四個區塊，手動改很容易漏。建議用腳本依語言區塊替換，並斷言每個 key 剛好命中一次：
+五種語言的同一個 key 分散在五個區塊，手動改很容易漏。建議用腳本依語言區塊替換，並斷言每個 key 剛好命中一次：
 
 ```python
 import re, json
-V = {"en": "...", "zh-TW": "...", "zh-CN": "...", "fr": "..."}
+V = {"en": "...", "zh-TW": "...", "zh-CN": "...", "fr": "...", "ko": "..."}
 KEY = "p1.callout"
 s = open("script.js").read()
-order = ["en", "zh-TW", "zh-CN", "fr"]
+order = ["en", "zh-TW", "zh-CN", "fr", "ko"]
 starts = [s.index(f'I18N["{l}"] = {{') for l in order] + [s.index("/* ── apply")]
 out = s[:starts[0]]
 for i, l in enumerate(order):
@@ -125,12 +133,14 @@ open("script.js", "w").write(out)
 - `≥ 1100px`：專案卡出現右側欄。
 - `≤ 900px`：側欄收成頂部列，頁面切換變成三個並排分頁鈕（`.pages` 用 `repeat(3, 1fr)`；**若新增第四頁要改這裡**）。
 - 中文標題有專屬規則 `html[lang^="zh"] .hero h1`，放寬寬度避免斷字。
+- 韓文有 `html[lang="ko"] body { word-break: keep-all; }`，讓韓文在詞與詞之間換行，不在詞中間斷開；標題寬度規則同中文。字體堆疊裡有 Apple SD Gothic Neo、Malgun Gothic、Noto Sans KR。
+- 新增語言時：`script.js` 的 `SUPPORTED`、`OG_LOCALE`、字典區塊，三個 HTML 的語言選單 `<option>`，以及需要的話加語言專屬 CSS。
 
 ## 新增頁面
 
 1. 複製一個現有 HTML，改 `<body data-page>`、`<title>` 與各 meta、`og:url`，把 `aria-current` 移到新頁的連結。
-2. 另外兩個 HTML 的側欄也要加上新頁連結。
-3. 四種語言都加上 `nav.<page>`、`meta.<page>.title`、`meta.<page>.desc` 與內容 key。
+2. 另外兩個 HTML 的側欄也要加上新頁連結。新頁的 canonical 改成自己的網址，並加進 `sitemap.xml`。
+3. 五種語言都加上 `nav.<page>`、`meta.<page>.title`、`meta.<page>.desc` 與內容 key。
 4. 窄螢幕的 `.pages` 欄數要跟著調整。
 5. 更新根目錄 `README.md` 的頁面清單。
 
